@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from "./assets/logo.png";
 
 function App() {
   const [boards, setBoards] = useState([]);
