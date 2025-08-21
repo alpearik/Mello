@@ -9,6 +9,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cards")
+@CrossOrigin(origins = "http://localhost:5174")
+
 public class CardController {
     private final CardService cardService;
 
