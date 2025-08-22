@@ -1,6 +1,7 @@
 package com.aa.mello.entity;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Card {
@@ -13,6 +14,7 @@ public class Card {
 
     @ManyToOne
     @JoinColumn(name = "list_id")
+    @JsonBackReference
     private ListEntity list;
 
     public Long getId() { return id; }

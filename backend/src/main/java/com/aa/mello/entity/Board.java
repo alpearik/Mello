@@ -3,6 +3,7 @@ package com.aa.mello.entity;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 
@@ -13,6 +14,7 @@ public class Board {
     private String title;
 
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<ListEntity> lists = new ArrayList<>();
     
     public Long getId() { return id; }
